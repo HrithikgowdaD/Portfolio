@@ -811,6 +811,14 @@ footer{
     .project-box{
         width: 80%;
     }
+    .project-card {
+    width: 80%;
+}
+
+.project-card {
+    width: 100%;
+}
+
 
 }
 
@@ -874,4 +882,42 @@ footer{
   list-style: disc;
   margin-left: 20px;
   margin-bottom: 30px;
+}
+
+
+
+
+.project-card {
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 1px 8px 10px var(--first-shadow-color);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: var(--text-color-second);
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+.tech {
+    font-size: 13px;
+    color: #b1cf5f;
+    font-weight: 500;
+}
+
+.project-links {
+    margin-top: auto;
 }
