@@ -485,10 +485,19 @@ body .dark-mode .icon a {
 }
 
 .image img {
-    width: 380px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+
+    /* 🔥 STRONG ZOOM (YOU FILL THE CIRCLE) */
+    transform: scale(1.45);
+
+    /* 🔥 MOVE IMAGE UP SO FACE IS CENTERED */
+    object-position: center 50%;
+
+    transition: transform 0.6s ease;
 }
+
 
 @keyframes imgFloat {
     50% {
@@ -937,6 +946,13 @@ footer {
 
 }
 
+@media (max-width: 768px) {
+    .image img {
+        object-position: center 15%;
+    }
+}
+
+
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px) {
@@ -1114,9 +1130,12 @@ footer {
 }
 
 .image-modal img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 600px;
+    max-height: 600px;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: center 12%;
+    transform: scale(5);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
